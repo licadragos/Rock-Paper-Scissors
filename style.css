@@ -1,0 +1,88 @@
+body {
+	background-color: #CCC;
+  }
+
+  /* Wrapper */
+  #wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.2fr 0.4fr 1fr;
+    grid-template-areas: 
+    "one two three"
+    "select select select"
+    "selections selections selections"
+    "results results results";
+    grid-gap: 0.5rem;
+  }
+  
+  #one{
+    grid-area: one;
+  }
+  #two{
+    grid-area: two;
+  }
+  #three{
+    grid-area: three;
+  }
+
+  .select{
+    grid-area: select;
+  }
+  .selections{
+    grid-area: selections;
+    text-align: center;
+  }
+  .results{
+    grid-area: results;
+    text-align: center;
+  }
+
+  h1, p{
+	  text-align: center;
+  }
+
+  p{
+	  font-size: 25px;
+  }
+
+  #wrapper{
+    max-width: 1000px;
+    height: 220px;
+    margin: 0 auto;
+    text-align: center;
+}
+  
+  .selection {
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 2rem;
+	transition: 100ms;
+  }
+  
+  .selection:hover {
+	transform: scale(1.2);
+  }
+  
+  .results {
+	margin-top: 1rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+  }
+  
+  .result-score {
+	margin-left: .1rem;
+	font-size: .5rem;
+	color: #333;
+  }
+  
+  .result-selection {
+	opacity: .5;
+  }
+  
+  .result-selection.winner {
+	opacity: 1;
+	font-size: 1.5rem;
+  }
